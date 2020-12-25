@@ -20,8 +20,8 @@ class App{
         this.stageHeight = document.body.clientHeight;
         
         //캔버스를 더블 사이즈로 지정해서 레티나 디스플레이에서도 화면이 잘 보이도록 설정한다.
-        //this.canvas.width = this.stageWidth*2;
-        //this.canvas.height = this.stageHeight*2;
+        this.canvas.width = this.stageWidth*2;
+        this.canvas.height = this.stageHeight*2;
         this.ctx.scale(2,2);
 
         this.waveGroup.resize(this.stageWidth, this.stageHeight);

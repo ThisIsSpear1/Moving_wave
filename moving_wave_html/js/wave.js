@@ -5,7 +5,7 @@ export class Wave{
         this.index = index;
         this.totalPoints = totalPoints;
         this.color = color;
-        this.points = []
+        this.points = [];
     }
 
     resize(stageWidth, stageHeight){
@@ -50,7 +50,7 @@ export class Wave{
             const cx = (prevX + this.points[i].x)/2
             const cy = (prevY + this.points[i].y)/2
 
-            ctx.lineTo(cx, cy);
+            ctx.quadraticCurveTo(prevX, prevY, cx, cy);
 
             prevX = this.points[i].x;
             prevY = this.points[i].y;
